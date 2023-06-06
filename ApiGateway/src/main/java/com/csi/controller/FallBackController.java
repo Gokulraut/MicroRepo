@@ -1,0 +1,25 @@
+package com.csi.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FallBackController {
+
+    @GetMapping("/customerfallback")
+    public ResponseEntity<String> customerFallBack() {
+        return ResponseEntity.ok("Customer Service is Down Please Wait!!!!!");
+
+    }
+    @GetMapping("/productfallback")
+    public ResponseEntity<String> productFallBack() {
+        return ResponseEntity.ok("Product Service is Down Please Wait!!!!!");
+
+    }
+    @GetMapping("/orderdetailfallback")
+    public ResponseEntity<String> orderDetailFallBack() {
+        return ResponseEntity.ok("Order Detail Service is Down Please Wait!!!!!");
+
+    }
+}
